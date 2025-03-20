@@ -2,7 +2,7 @@ name: Deploy Static HTML to GitHub Pages
 on:
   push:
     branches:
-      - main  # Make sure this is your branch
+      - main  # Ensure your main branch is correct
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v2  # Corrected
         with:
           path: .  # Deploy everything in the repository root
       - name: Deploy to GitHub Pages
